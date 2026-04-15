@@ -1,0 +1,57 @@
+@use "../sass" as *;
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image:
+    url("../assets/pattern-hills.svg"), url("../assets/bg-stars.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: auto;
+
+  &__title {
+    color: var(--clr-neutral-100);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 6px;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+  }
+  &__timer {
+    gap: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__icons {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    margin-bottom: 10rem;
+    gap: 2rem;
+  }
+  @include tablet {
+
+    &__title {
+      font-size: 1.8rem;
+    }
+    &__timer {
+      gap: 2rem;
+    }
+
+    img {
+      @include square(35px);
+    }
+  }
+  @include laptop {
+    background-size: contain;
+  }
+}
+img {
+  @include square(30px);
+}

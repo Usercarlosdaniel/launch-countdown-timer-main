@@ -1,0 +1,18 @@
+@use "breakpoints" as *;
+
+@mixin tablet {
+  @media screen and (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
